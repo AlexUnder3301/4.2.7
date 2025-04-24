@@ -1,4 +1,5 @@
 const listContainer = document.querySelector('.list-container')
+const list = document.querySelector('.list')
 
 const createListCard = (item) => {
     const card = document.createElement('li')
@@ -33,7 +34,7 @@ listContainer.addEventListener('click', (evt) => {
 
 resultsContainer.addEventListener('click', evt => {
     const card = createListCard(evt.target)
-    listContainer.append(card)
+    list.append(card)
     input.value = ''
     resultsContainer.innerHTML = ""
 })
